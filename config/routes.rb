@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get '/test' => redirect("http://192.168.15.170/"), :as => :test
 
   resources :angels
+
+  get 'users/:id' => 'users#show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
