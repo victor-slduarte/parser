@@ -1,6 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-3">
+        <div class="card">
+            <i class="fas fa-mobile-alt"></i>
+            <h2>Telefone:</h2> <p><%= current_user.phone_number %></p>
+            <p>Editar</p>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <div class="card">
+            <i class="far fa-address-card"></i>
+            <h2>Endereço:</h2>
+            <p> <%= current_user.address %></p>
+            <p>Editar</p>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <div class="card">
+            <i class="fas fa-car"></i>
+            <h2>Modelo e Placa do carro:</h2>
+            <p><%= current_user.car_model %>
+            <%= current_user.car_plate %></p>
+            <p>Editar</p>
+        </div>
+    </div>
+      <div class="col-xs-12 col-sm-3">
+        <div class="card">
+            <i class="fas fa-plus-circle"></i>
+            <p> Adicionar novo Anjo
+            <% current_user.angels.each do |anjo| %>
+            <%= anjo.first_name %> <%= anjo.last_name %> <%= anjo.phone_number %></p>
+            <% end %>
+       </div>
+    </div>
+
+       </div>
+      </div>
 
 
 
+<!--
+CODIGO DO VITOR
 
 <div class= "profile-box">
   <div class="central-box">
@@ -10,7 +50,7 @@
 </div>
 
 
-<!-- current user informations -->
+current user informations
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-4">
@@ -55,10 +95,4 @@
     </div>
   <% end %>
 </div>
-
-
-
-
-
-
-
+ -->
