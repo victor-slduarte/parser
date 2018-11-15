@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @angels = Angels.new
   end
 
-  def map
+  def
   end
 
 end
