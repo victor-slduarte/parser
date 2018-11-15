@@ -1,0 +1,64 @@
+
+
+
+
+<div class= "profile-box">
+  <div class="central-box">
+    <img class="img-circle" src="https://kitt.lewagon.com/placeholder/users/victor-slduarte" class="avatar" id="navbar-wagon-menu">
+    <h2><%= current_user.first_name %>  <%= current_user.last_name %></h2>
+  </div>
+</div>
+
+
+<!-- current user informations -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <div class="card">
+        <h3>Modelo do carro: <%= current_user.car_model %></h3>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card">
+        <h3>Placa do carro: <%= current_user.car_plate %></h3>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card">
+        <h3> Endereço: <%= current_user.address %></h3>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card">
+        <h3> Telefone: <%= current_user.phone_number %></h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+      <h2>Anjos</h2>
+  </div>
+
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-3 new-angel-card">
+     <i class="fas fa-plus-circle"></i>
+     <p>Novo Anjo</p>
+    </div>
+      <% current_user.angels.each do |anjo| %>
+        <div class="col-xs-12 col-sm-3 angel-card">
+         <p><%= anjo.first_name %> <%= anjo.last_name %></p> <p><%= anjo.phone_number %></p>
+       </div>
+    </div>
+  <% end %>
+</div>
+
+
+
+
+
+
+
