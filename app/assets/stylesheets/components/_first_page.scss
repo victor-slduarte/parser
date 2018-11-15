@@ -1,13 +1,12 @@
-.banner {
+ .banner {
   background-size: cover !important;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   overflow: hidden;
-}
-
-@media (min-width: 1000px) {
-.banner {background-attachment: fixed;}
+  background: url('/assets/mobilevideo.mp4');
+  width:100vw;
+  height:100vh;
 }
 
 .banner-home {
@@ -20,18 +19,39 @@
   left: 0;
   z-index: -1;
   width: 100%;
+  display: none;
+}
+
+.teaser-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
 }
 
 video::-webkit-media-controls {
   display: none;
 }
-
-.logo img {
-  margin: 8vh 0 34vh 0;
-  margin-left: 203px;
-}
-
+/* regra do mobile */
 .logo {
-  margin-top: 100px;
-  width: 960px;
+  width: 240px;
+}
+/*
+regra do desktop */
+@media (min-width: 1000px) {
+.banner {background-attachment: fixed;}
+
+  .teaser-mobile {
+    display:none;
+  }
+
+  .teaser {
+    display:block;
+  }
+
+  .logo {
+    width: 400px;
+  }
+
 }
