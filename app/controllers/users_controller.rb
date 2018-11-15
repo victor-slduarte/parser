@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def dashboard
-    @angels = Angels.new
+    @user = User.find(params[:id])
   end
 
   def map
