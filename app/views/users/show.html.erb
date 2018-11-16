@@ -1,35 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs´12 col-sm-3"></div>
+      <div class="message">
+        <img class="avatar-large" src="/assets/Diego.jpeg">
+        <div class="message-name">
+          <h3>Diego de Paula</h3>
+          <p>Motorista</p>
+        </div>
+      </div>
 
-<%= if button_active %>
-  <h1><%= @user.first_name %> <%= @user.last_name %>%></h1>
-
-
-  <div class="avatar">
-    imagem de avatar aqui
+        <div class="message-body">
+          <p><strong>Placa</strong></p>
+          <p>
+            BOY-1978
+          </p>
+        </div>
+        <div class="message-body">
+          <p><strong>Modelo</strong></p>
+          <p>
+            Porsche 911 Turbo
+          </p>
+        </div>
+        <div class="message-body">
+          <p><strong>Cor</strong></p>
+          <p>
+            Cinza
+          </p>
+        </div>
+      </div>
   </div>
+</div>
+<div class="current-address">
+  <h3>Localização - carro em perigo</h3>
+  <p id="location"></p>
+</div>
 
-
-  <div>
-    <%= @user.car_model %> <%= @user.car_plate %>
-  </div>
-
-
-  <div>
-    mapa
-  </div>
-
-  <div> rua que ele esta</div>
-
-
-
-
-
-  <%= else %>
-
-
-  <div></div>
-
-
-<%= end %>
+<%= render 'shared/map' %>
 
 
 
