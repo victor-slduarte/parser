@@ -6,20 +6,7 @@
   color: white;
   position: relative;
 }
-.card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 40px;
-  border-radius: 50%;
-}
-.card-category {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 15px;
-  text-transform: uppercase;
-}
+
 .card-description {
   position: absolute;
   bottom: 10px;
@@ -27,11 +14,6 @@
 }
 .card-description h2 {
   font-size: 24px;
-}
-.card-description p {
-  font-size: 14px;
-  opacity: 0.7;
-  font-weight: lighter;
 }
 .card-link {
   position: absolute;
@@ -46,3 +28,116 @@
 .card-link:hover {
   opacity: 0.1;
 }
+
+.modal-content {
+  color: black;
+  text-shadow:none;
+  text-align: center;
+  width:355px;
+}
+
+.modal-content h5 {
+  font-size: 15px;
+}
+
+.modal-footer {
+    padding: 10px;
+    text-align: center;
+    border-top: none;
+  }
+
+.btn-dark {
+    color: #fff;
+    background-color: #0E92CB;
+    border-color: #0E92CB;
+    font-size: 15px
+}
+
+
+
+
+
+
+
+
+
+/* .card {
+  height: 175px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  text-align:center;
+  position: relative;
+}
+
+.card h2 {
+  font-size: 24px;
+  text-align:center;
+}
+.card p {
+  font-size: 14px;
+  opacity: 0.7;
+  font-weight: lighter;
+  text-align:center;
+}
+.card-user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  border-radius: 50%;
+}
+.card-category {
+  position: absolute;
+  text-align:center;
+  top: 10px;
+  left: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.card-description {
+  position: absolute;
+  text-align:center;
+  bottom: 10px;
+  left: 10px;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+.card-link:hover {
+  opacity: 0.1;
+}
+
+.modal-content {
+  color: black;
+  text-shadow:none;
+  text-align: center;
+  width:355px;
+}
+
+.modal-content h5 {
+  font-size: 15px;
+}
+
+.modal-footer {
+    padding: 10px;
+    text-align: center;
+    border-top: none;
+  }
+
+.btn-dark {
+    color: #fff;
+    background-color: #0E92CB;
+    border-color: #0E92CB;
+    font-size: 15px
+}
+ */

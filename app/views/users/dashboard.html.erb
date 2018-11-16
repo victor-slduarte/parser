@@ -1,19 +1,105 @@
 <div class="container">
   <div class="row">
-
-
-    <!-- CARD 1 - MOBILE AND EMAIL -->
     <div class="col-xs-12 col-sm-3">
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/telefone_email.jpeg');">
-          <div class="card-description">
-            <h2>Meu telefone e E-mail</h2>
-            <p>Very cool city, the best</p>
+        <div class="card-description">
+          <h2>Meu número e e-mail</h2>
+        </div>
+          <a class="card-link" href="#" data-toggle="modal" data-target="#exampleModalCenter" ></a>
+<!--------- Modal ------------------------------------------------------------------------->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5> Telefone:  <%= current_user.phone_number %></h5>
+                <h5> E-mail: <%= current_user.email %></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Editar</button>
+                <button type="button" class="btn btn-dark">Sair</button>
+              </div>
+            </div>
           </div>
-          <a class="card-link" href="#" ></a>
+        </div>
+       </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- codigo mais recente
+
+
+
+
+
+
+
+    CARD 1 - MOBILE AND EMAIL
+    <div class="col-xs-12 col-sm-3">
+      <div class="card" data-toggle="modal" data-target="#exampleModalCenter" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/telefone_email.jpeg');">
+            <div class="cardname">
+            <h2>Meu telefone e E-mail</h2>
+          </div>
+          BEGIN MODAL :::: Button trigger modal
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+Launch demo modal
+</button>
+
+Modal
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5> Telefone:  <%= current_user.phone_number %></h5>
+        <h5> E-mail: <%= current_user.email %></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-dismiss="modal">Editar</button>
+        <button type="button" class="btn btn-dark">Sair</button>
+      </div>
+    </div>
+  </div>
+</div>
+END MODAL --------------------------------------------------------------------
+
+
       </div>
     </div>
 
-    <!-- CARD 2 - ADDRESS -->
+
+
+
+
+
+
+    CARD 2 - ADDRESS
     <div class="col-xs-12 col-sm-3">
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/endereço1.jpeg');">
           <div class="card-description">
@@ -24,8 +110,10 @@
       </div>
     </div>
 
+
+CARD 3- car
     <div class="col-xs-12 col-sm-3">
-      <!-- insert <div class="card"> -->
+      insert <div class="card">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/placa1.jpeg');">
             <div class="card-description">
             <h2>Informações do meu carro</h2>
@@ -35,9 +123,9 @@
         </div>
     </div>
 
-
+CARD 2 - angels
     <div class="col-xs-12 col-sm-3">
-      <!-- insert <div class="card"> -->
+      insert <div class="card">
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/angels.jpeg');">
           <div class="card-description">
             <h2>Angels</h2>
@@ -51,7 +139,7 @@
 
 
 
-
+ -->
 
 
 
