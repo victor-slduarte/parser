@@ -10,12 +10,8 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
-  def
-  end
-
   def danger
     @user.send_wpp_messages
-
     head :ok
   end
 
