@@ -5,50 +5,53 @@
     <%= f.error_notification %>
 
     <div class="form-inputs">
-      <%= f.input :email, required: true, autofocus: true %>
-
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
       <% end %>
 
       <%= f.input :email,
                   hint: "leave it blank if you don't want to change it",
-                  required: false %>
+                  required: false,
+                  as: (params[:address] == 'true' || params[:car_info] == 'true' || params[:angels] == 'true' ? :hidden : :string) %>
       <%= f.input :first_name,
                   hint: "leave it blank if you don't want to change it",
                   required: false,
-                  as: (params[:form_type] == '1' || params[:form_type] == '2' ? :hidden : :string) %>
+                  as: (params[:address] == 'true' || params[:car_info] == 'true' || params[:angels] == 'true' ? :hidden : :string) %>
       <%= f.input :last_name,
                   hint: "leave it blank if you don't want to change it",
                   required: false,
-                  as: (params[:simple] == 'true' ? :hidden : :string)  %>
+                  as: (params[:address] == 'true' || params[:car_info] == 'true' || params[:angels] == 'true' ? :hidden : :string) %>
       <%= f.input :address,
                   hint: "leave it blank if you don't want to change it",
-                  required: false %>
+                  required: false,
+                  as: (params[:info_geral] == 'true' || params[:car_info] == 'true' || params[:angels] == 'true' ? :hidden : :string) %>
       <%= f.input :phone_number,
                   hint: "leave it blank if you don't want to change it",
-                  required: false %>
+                  required: false,
+                  as: (params[:address] == 'true' || params[:car_info] == 'true' || params[:angels] == 'true' ? :hidden : :string) %>
       <%= f.input :car_model,
                   hint: "leave it blank if you don't want to change it",
-                  required: false %>
+                  required: false,
+                  as: (params[:address] == 'true' || params[:info_geral] == 'true' || params[:angels] == 'true' ? :hidden : :string) %>
       <%= f.input :car_plate,
                   hint: "leave it blank if you don't want to change it",
-                  required: false %>
+                  required: false,
+                  as: (params[:address] == 'true' || params[:info_geral] == 'true' || params[:angels] == 'true' ? :hidden : :string) %>
       <%= f.input :password,
                   hint: "leave it blank if you don't want to change it",
                   required: false,
-                  as: (params[:simple] == 'true' ? :hidden : :string)  %>
+                  as: (params[:address] == 'true' || params[:car_info] == 'true' || params[:angels] == 'true' ? :hidden : :string),
                   input_html: { autocomplete: "new-password" } %>
 
       <%= f.input :password_confirmation,
                   required: false,
-                  as: (params[:simple] == 'true' ? :hidden : :string)  %>
+                  as: (params[:address] == 'true' || params[:car_info] == 'true' || params[:angels] == 'true' ? :hidden : :string),
                   input_html: { autocomplete: "new-password" } %>
 
       <%= f.input :current_password,
                   hint: "we need your current password to confirm your changes",
                   required: true,
-                  as: (params[:simple] == 'true' ? :hidden : :string)  %>
+                  as: (params[:address] == 'true' || params[:car_info] == 'true' || params[:angels] == 'true' ? :hidden : :string),
                   input_html: { autocomplete: "current-password" } %>
 
     </div>
