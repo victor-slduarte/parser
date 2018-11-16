@@ -1,29 +1,36 @@
 
-  <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+<div class="message">
+  <img class="avatar-large" src="/assets/Diego.jpeg">
+  <div class="message-name">
+    <h3>Diego de Paula</h3>
+    <p>Motorista</p>
 
-
-  <div class="avatar">
-    imagem de avatar aqui
   </div>
-
-
-  <div>
-    <%= @user.car_model %> <%= @user.car_plate %>
+  <div class="message-body">
+    <p><strong>Placa</strong></p>
+    <p>
+      BOY-1978
+    </p>
   </div>
-
-
-  <div>
-    mapa
+  <div class="message-body">
+    <p><strong>Modelo</strong></p>
+    <p>
+      Porsche 911 Turbo
+    </p>
   </div>
+  <div class="message-body">
+    <p><strong>Cor</strong></p>
+    <p>
+      Cinza
+    </p>
+  </div>
+</div>
+<div class="current-address">
+  <h3>Localização - carro em perigo</h3>
+  <p id="location"></p>
+</div>
 
-  <div> rua que ele esta</div>
-
-
-
-
-
-
-
+<%= render 'shared/map' %>
 
 
 
