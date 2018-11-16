@@ -17,7 +17,7 @@
       <%= f.input :first_name,
                   hint: "leave it blank if you don't want to change it",
                   required: false,
-                  as: (params[:simple] == 'true' ? :hidden : :string) %>
+                  as: (params[:form_type] == '1' || params[:form_type] == '2' ? :hidden : :string) %>
       <%= f.input :last_name,
                   hint: "leave it blank if you don't want to change it",
                   required: false,
