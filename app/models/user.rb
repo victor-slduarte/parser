@@ -11,13 +11,13 @@ class User < ApplicationRecord
     auth_token = '7ca1809b6aa72e9e5cf7a58af46ce39d'
     @client = Twilio::REST::Client.new(account_sid, auth_token)
 
-
     self.angels.each do |angel|
       message = @client.messages.create(
-                             body: " #{angel.first_name} #{angel.last_name},
-                             #{self.first_name} #{self.last_name} pode estar com problemas!
-                             Clique no link para ver sua localização ao vivo:
-                             LINK AQUI ",
+                             body:
+"#{angel.first_name} #{angel.last_name},
+
+#{self.first_name} #{self.last_name} pode estar com problemas!
+Clique no link para ver sua localização ao vivo: LINK AQUI ",
 
                              from: 'whatsapp:+14155238886',
                              to: "whatsapp:#{angel.phone_number}"
