@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
+
   root to: 'pages#home'
 
   resources :angels
 
-  resources :users, only: [:show] do
-    get 'danger', on: :member
-  end
+  # resources :users, only: [:show] do
+  #   get 'danger', on: :member
+  # end
 
 
 
