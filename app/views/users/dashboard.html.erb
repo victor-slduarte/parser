@@ -1,113 +1,120 @@
 <div class="container">
   <div class="row">
 
-
-    <!-- CARD 1 - MOBILE AND EMAIL -->
+<!--------- Card1 telefone e email ---------------------------------------------------------------->
     <div class="col-xs-12 col-sm-3">
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/telefone_email.jpeg');">
-          <div class="card-description">
-            <h2>Meu telefone e E-mail</h2>
-            <p>Very cool city, the best</p>
-          </div>
-          <a class="card-link" href="#" ></a>
-      </div>
-    </div>
+        <div class="card-description">
+          <h2>Meu telefone e e-mail</h2>
+        </div>
+          <a class="card-link" href="#" data-toggle="modal" data-target="#exampleModalCenter" ></a>
+<!--------- Modal ------------------------------------------------------------------------->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5> Telefone:  <%= current_user.phone_number %></h5>
+                <h5> E-mail: <%= current_user.email %></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+              </div>
+              <div class="modal-footer">
 
-    <!-- CARD 2 - ADDRESS -->
+                <%= link_to 'Editar', edit_user_registration_path(simple: 'true'), class: 'btn btn-dark' %>
+                <button type="button" class="btn btn-dark">Sair</button>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+    </div>
+<!--------- Card1 ------------------------------------------------------------------------->
+
+<!--------- Card2 Endereço-------------------------------------------------------------->
     <div class="col-xs-12 col-sm-3">
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/endereço1.jpeg');">
-          <div class="card-description">
-            <h2>Meu endereço</h2>
-            <p>Very cool city, the best</p>
-          </div>
-          <a class="card-link" href="#" ></a>
-      </div>
-    </div>
-
-    <div class="col-xs-12 col-sm-3">
-      <!-- insert <div class="card"> -->
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/placa1.jpeg');">
-            <div class="card-description">
-            <h2>Informações do meu carro</h2>
-            <p>Very cool city, the best</p>
-            </div>
-          <a class="card-link" href="#" ></a>
+        <div class="card-description">
+          <h2>Meu endereço</h2>
         </div>
+          <a class="card-link" href="#" data-toggle="modal" data-target="#exampleModalCenter" ></a>
+<!--------- Modal ------------------------------------------------------------------------->
+        <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5> Endereço:  <%= current_user.address %></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+              </div>
+              <div class="modal-footer">
+
+                <%= link_to 'Editar', edit_user_registration_path(simple: 'true'), class: 'btn btn-dark' %>
+                <button type="button" class="btn btn-dark">Sair</button>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+    </div>
+<!--------- Card2 ------------------------------------------------------------------------->
+
+<!--------- Card3  Placa e Modelos --------------------------------------------------------->
+    <div class="col-xs-12 col-sm-3">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/placa1.jpeg');">
+        <div class="card-description">
+          <h2>Modelo e Placa</h2>
+        </div>
+          <a class="card-link" href="#" data-toggle="modal" data-target="#exampleModalCenter" ></a>
+<!--------- Modal ------------------------------------------------------------------------->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5> Modelo:  <%= current_user.car_model %></h5>
+                <h5> Placa:  <%= current_user.car_plate %></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+              </div>
+              <div class="modal-footer">
+
+                <%= link_to 'Editar', edit_user_registration_path(simple: 'true'), class: 'btn btn-dark' %>
+                <button type="button" class="btn btn-dark">Sair</button>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
     </div>
 
-
+<!--------- Card4 ANngels ----------------------------------------------------->
     <div class="col-xs-12 col-sm-3">
-      <!-- insert <div class="card"> -->
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/angels.jpeg');">
-          <div class="card-description">
-            <h2>Angels</h2>
-            <p>Very cool city, the best</p>
+        <div class="card-description">
+          <h2>Angels cadastrados</h2>
+        </div>
+          <a class="card-link" href="#" data-toggle="modal" data-target="#exampleModalCenter" ></a>
+<!--------- Modal ------------------------------------------------------------------------->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5> Modelo:  <%= current_user.car_model %></h5>
+                <h5> Placa:  <%= current_user.car_plate %></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+              </div>
+              <div class="modal-footer">
+
+                <%= link_to 'Editar', edit_user_registration_path(simple: 'true'), class: 'btn btn-dark' %>
+                <button type="button" class="btn btn-dark">Sair</button>
+              </div>
+            </div>
           </div>
-          <a class="card-link" href="#" ></a>
-          </div>
+        </div>
+       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- codigo stephanie -->
-<!-- <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-3">
-        <div class="card">
-            <i class="fas fa-mobile-alt"></i>
-            <h2>Telefone:</h2> <p><%= current_user.phone_number %></p>
-            <p>Editar</p>
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-3">
-        <div class="card">
-            <i class="far fa-address-card"></i>
-            <h2>Endereço:</h2>
-            <p> <%= current_user.address %></p>
-            <p>Editar</p>
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-3">
-        <div class="card">
-            <i class="fas fa-car"></i>
-            <h2>Modelo e Placa do carro:</h2>
-            <p><%= current_user.car_model %>
-            <%= current_user.car_plate %></p>
-            <p>Editar</p>
-        </div>
-    </div>
-      <div class="col-xs-12 col-sm-3">
-        <div class="card">
-            <i class="fas fa-plus-circle"></i>
-            <p> Adicionar novo Anjo
-            <% current_user.angels.each do |anjo| %>
-            <%= anjo.first_name %> <%= anjo.last_name %> <%= anjo.phone_number %></p>
-            <% end %>
-       </div>
-    </div>
-
-       </div>
-      </div>
- -->
 
 
 <!--
