@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show] do
     get 'danger', on: :member
-    get 'dashboard', on: :member
+    get 'map', on: :member
   end
 
 

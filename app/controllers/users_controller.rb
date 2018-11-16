@@ -6,16 +6,13 @@ class UsersController < ApplicationController
   def show
   end
 
-  def dashboard
-    @user = current_user
-  end
-
   def danger
     @user.send_wpp_messages
     head :ok
   end
 
   def map
+    @user = current_user
   end
 
   private
