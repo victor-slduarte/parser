@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
+  # authenticated :user do
+  #   root to:"user#dashboard"
+  # end
+
   resources :angels
 
   resources :users, only: [:show] do

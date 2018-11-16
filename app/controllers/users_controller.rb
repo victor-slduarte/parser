@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[danger show]
-
   before_action :set_user, only: %i[show danger]
+
 
   def show
   end
@@ -13,6 +13,9 @@ class UsersController < ApplicationController
   def danger
     @user.send_wpp_messages
     head :ok
+  end
+
+  def map
   end
 
   private
