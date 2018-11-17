@@ -96,16 +96,13 @@
               <div class="modal-header">
                 <h5> Lista de Angels:  </h5>
               </div>
-
                 <% Angel.all.each_with_index do |angel, i| %>
                   <% break if i > 5 %>
                   <p> <%= angel.first_name %> </p>
                 <% end %>
               <div class="modal-footer">
-                <!-- aguarda o path do angels e o view do angels  -->
-                <!-- <%= link_to 'Adicionar', new_angel_path, class: 'btn btn-dark' %> -->
-
-                <!-- <%= link_to 'Editar', edit_user_registration_path(angels: 'true'), class: 'btn btn-dark' %> -->
+                <%= link_to 'Adicionar', new_user_angel_path(@user), class: 'btn btn-dark' %>
+                <%= link_to 'Editar', edit_user_angel_path(@user), class: 'btn btn-dark' %>
               </div>
             </div>
           </div>
