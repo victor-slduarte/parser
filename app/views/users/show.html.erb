@@ -1,39 +1,113 @@
+<div class="container">
+  <div class="row">
 
-<div class="message">
-  <img class="avatar-large" src="/assets/Diego.jpeg">
-  <div class="message-name">
-    <h3>Diego de Paula</h3>
-    <p>Motorista</p>
+<!--------- Card1 telefone e email ---------------------------------------------------------------->
+    <div class="col-xs-12 col-sm-3">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/telefone_email.jpeg');">
+        <div class="card-description">
+          <h2>Meu telefone e e-mail</h2>
+        </div>
+          <a class="card-link" href="#" data-toggle="modal" data-target="#exampleModalCenter" ></a>
+<!--------- Modal ------------------------------------------------------------------------->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5> Telefone:  <%= current_user.phone_number %></h5>
+                <h5> E-mail: <%= current_user.email %></h5>
 
-  </div>
-  <div class="message-body">
-    <p><strong>Placa</strong></p>
-    <p>
-      BOY-1978
-    </p>
-  </div>
-  <div class="message-body">
-    <p><strong>Modelo</strong></p>
-    <p>
-      Porsche 911 Turbo
-    </p>
-  </div>
-  <div class="message-body">
-    <p><strong>Cor</strong></p>
-    <p>
-      Cinza
-    </p>
+              </div>
+              <div class="modal-footer">
+
+                <%= link_to 'Editar', edit_user_registration_path(info_geral: 'true'), class: 'btn btn-dark' %>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+    </div>
+<!--------- Card1 ------------------------------------------------------------------------->
+
+<!--------- Card2 Endereço-------------------------------------------------------------->
+    <div class="col-xs-12 col-sm-3">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/endereço1.jpeg');">
+        <div class="card-description">
+          <h2>Meu endereço</h2>
+        </div>
+          <a class="card-link" href="#" data-toggle="modal" data-target="#exampleModalCenter2" ></a>
+<!--------- Modal ------------------------------------------------------------------------->
+        <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5> Endereço:  <%= current_user.address %></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+              </div>
+              <div class="modal-footer">
+
+                <%= link_to 'Editar', edit_user_registration_path(address: 'true'), class: 'btn btn-dark' %>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+    </div>
+<!--------- Card2 ------------------------------------------------------------------------->
+
+<!--------- Card3  Placa e Modelos --------------------------------------------------------->
+    <div class="col-xs-12 col-sm-3">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/placa1.jpeg');">
+        <div class="card-description">
+          <h2>Modelo e Placa</h2>
+        </div>
+          <a class="card-link" href="#" data-toggle="modal" data-target="#exampleModalCenter3" ></a>
+<!--------- Modal ------------------------------------------------------------------------->
+        <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5> Modelo:  <%= current_user.car_model %></h5>
+                <h5> Placa:  <%= current_user.car_plate %></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+              </div>
+              <div class="modal-footer">
+
+                <%= link_to 'Editar', edit_user_registration_path(car_info: 'true'), class: 'btn btn-dark' %>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+    </div>
+
+<!--------- Card4 ANngels ----------------------------------------------------->
+    <div class="col-xs-12 col-sm-3">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/angels.jpeg');">
+        <div class="card-description">
+          <h2>Angels cadastrados</h2>
+        </div>
+          <a class="card-link" href="#" data-toggle="modal" data-target="#exampleModalCenter4" ></a>
+<!--------- Modal ------------------------------------------------------------------------->
+        <div class="modal fade" id="exampleModalCenter4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5> Lista de Angels:  </h5>
+              </div>
+                <% Angel.all.each_with_index do |angel, i| %>
+                  <% break if i > 5 %>
+                  <p> <%= angel.first_name %> </p>
+                <% end %>
+              <div class="modal-footer">
+                <%= link_to 'Adicionar', new_user_angel_path(@user), class: 'btn btn-dark' %>
+                <%= link_to 'Editar', edit_user_angel_path(@user), class: 'btn btn-dark' %>
+              </div>
+            </div>
+          </div>
+         </div>
+      </div>
+    </div>
   </div>
 </div>
-<div class="current-address">
-  <h3>Localização - carro em perigo</h3>
-  <p id="location"></p>
-</div>
-
-<%= render 'shared/map' %>
-
-
-
-
-
-
