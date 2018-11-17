@@ -6,24 +6,17 @@ class User < ApplicationRecord
 
   has_many :angels
 
-  def send_wpp_messages
-    account_sid = 'AC90f8ca48054e700aee47aa18760bf5e8'
-    auth_token = '7ca1809b6aa72e9e5cf7a58af46ce39d'
-    @client = Twilio::REST::Client.new(account_sid, auth_token)
-
+  def send_sms
+    account_sid = "ACa3f89f1058ccd3e0239c909a0f41216c" # Your Account SID from www.twilio.com/console
+    auth_token = "c68f3877a9bba3bfba3073ae85d99d47"   # Your Auth Token from www.twilio.com/console
+    @client = Twilio::REST::Client.new account_sid, auth_token
     self.angels.each do |angel|
       message = @client.messages.create(
-                             body:
-"#{angel.first_name} #{angel.last_name},
-
-#{self.first_name} #{self.last_name} pode estar com problemas!
-Clique no link para ver sua localização ao vivo: LINK AQUI ",
-
-                             from: 'whatsapp:+14155238886',
-                             to: "whatsapp:#{angel.phone_number}"
-                           )
+          body: "Victor Duarte, Diego pode estar com problemas! Acesse o link para ver sua localização ao vivo: LINK",
+          to: "+5513997109702",       # Replace with your phone number
+          from: "+12053955462")     # Replace with your Twilio number
       puts message.sid
     end
-    puts "Angels are coming to help"
+    puts "angels are comming"
   end
 end
