@@ -1,37 +1,50 @@
-<h2>Sign up</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <div class="form-edit-box">
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+        <h2>Registrar Novo Usuário</h2>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true ,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :first_name,
-                required: true%>
-    <%= f.input :last_name,
-                required: true%>
-    <%= f.input :car_model,
-                required: true%>
-    <%= f.input :car_plate,
-                required: true%>
-    <%= f.input :address,
-                required: true%>
-    <%= f.input :phone_number,
-                required: true%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-  </div>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+          <div class="form-inputs">
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true ,
+                        input_html: { autocomplete: "email" }%>
+            <%= f.input :first_name,
+                        label: "Nome",
+                        required: true%>
+            <%= f.input :last_name,
+                        label: "Sobrenome",
+                        required: true%>
+            <%= f.input :car_model,
+                        label:"Modelo do Carro",
+                        required: true%>
+            <%= f.input :car_plate,
+                        label:"Placa do Carro",
+                        required: true%>
+            <%= f.input :address,
+                        label: "Endereço",
+                        required: true%>
+            <%= f.input :phone_number,
+                        label: "Telefone",
+                        required: true%>
+            <%= f.input :password,
+                        label: "Senha",
+                        required: true,
+                        hint: ("Mínimo de #{@minimum_password_length} caracteres" if @minimum_password_length),
+                        input_html: { autocomplete: "new-password" } %>
+            <%= f.input :password_confirmation,
+                        label: "Confirmação de Senha",
+                        required: true,
+                        input_html: { autocomplete: "new-password" } %>
+          </div>
 
-<%= render "devise/shared/links" %>
+          <div class="form-actions">
+            <%= f.button :submit, "Registrar", class: "btn btn-primary" %>
+          </div>
+        <% end %>
+
+        <%= render "devise/shared/links" %>
