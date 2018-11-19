@@ -3,9 +3,10 @@
 
 <!--------- Card1 telefone e email ---------------------------------------------------------------->
     <div class="col-xs-12 col-sm-3">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/telefone_email.jpeg');">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('/assets/telefone_email.jpeg');">
         <div class="card-description">
-          <h2>Meu telefone e e-mail</h2>
+          <h2>Informações Gerais</h2>
+
         </div>
           <a class="card-link" href="#" data-toggle="modal" data-target="#exampleModalCenter" ></a>
 <!--------- Modal ------------------------------------------------------------------------->
@@ -13,8 +14,10 @@
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5> Telefone:  <%= current_user.phone_number %></h5>
                 <h5> E-mail: <%= current_user.email %></h5>
+                <h5> Nome: <%= current_user.first_name %></h5>
+                <h5> Sobrenome: <%= current_user.last_name %></h5>
+                <h5> Telefone:  <%= current_user.phone_number %></h5>
 
               </div>
               <div class="modal-footer">
@@ -30,9 +33,9 @@
 
 <!--------- Card2 Endereço-------------------------------------------------------------->
     <div class="col-xs-12 col-sm-3">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/endereço1.jpeg');">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('/assets/endereço1.jpeg');">
         <div class="card-description">
-          <h2>Meu endereço</h2>
+          <h2>Endereço</h2>
         </div>
           <a class="card-link" href="#" data-toggle="modal" data-target="#exampleModalCenter2" ></a>
 <!--------- Modal ------------------------------------------------------------------------->
@@ -57,7 +60,7 @@
 
 <!--------- Card3  Placa e Modelos --------------------------------------------------------->
     <div class="col-xs-12 col-sm-3">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/placa1.jpeg');">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('/assets/placa1.jpeg');">
         <div class="card-description">
           <h2>Modelo e Placa</h2>
         </div>
@@ -84,7 +87,7 @@
 
 <!--------- Card4 ANngels ----------------------------------------------------->
     <div class="col-xs-12 col-sm-3">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/angels.jpeg');">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('/assets/angels.jpeg');">
         <div class="card-description">
           <h2>Angels cadastrados</h2>
         </div>
@@ -97,8 +100,10 @@
                 <h5> Lista de Angels:  </h5>
               </div>
                 <% Angel.all.each_with_index do |angel, i| %>
-                  <% break if i > 5 %>
-                  <p> <%= angel.first_name %> </p>
+                  <% break if i > 2 %>
+                  <h5> <strong> Angel: </strong>  <%= angel.first_name %> </h5>
+                   <h5> <strong> Telefone: </strong>  <%= angel.phone_number %> </h5>
+
                 <% end %>
               <div class="modal-footer">
                 <%= link_to 'Adicionar', new_user_angel_path(@user), class: 'btn btn-dark' %>
