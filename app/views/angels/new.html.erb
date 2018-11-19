@@ -1,10 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <div class="form-edit-box">
 
-<h1> Create new Angel </h1>
+        <h1> Adicionar Angels </h1>
 
-<%= simple_form_for @angel, url: user_angels_path do |f| %>
-  <%= f.input :first_name%>
-  <%= f.input :last_name%>
-  <%= f.input :phone_number%>
+        <%= simple_form_for @angel, url: user_angels_path do |f| %>
+          <%= f.input :first_name,
+                      label: "Nome",
+                      required: true%>
+          <%= f.input :last_name,
+                      label:"Sobrenome",
+                      required: true%>
+          <%= f.input :phone_number,
+                      label: "Telefone",
+                      required: true%>
 
-  <%= f.submit "Create Angel", class: "btn btn-primary" %>
-<% end %>
+        <div class="form-actions">
+          <%= f.submit "Salvar Angels", class: "btn btn-primary" %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
