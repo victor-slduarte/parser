@@ -12,8 +12,8 @@ class User < ApplicationRecord
     @client = Twilio::REST::Client.new account_sid, auth_token
     self.angels.each do |angel|
       message = @client.messages.create(
-          body: "Victor Duarte, Diego pode estar com problemas! Acesse o link para ver sua localização ao vivo: LINK",
-          to: "+5513997109702",       # Replace with your phone number
+          body: "#{angel.first_name} #{angel.last_name}, #{self.first_name} pode estar com problemas! Acesse o link para ver sua localização ao vivo: LINK",
+          to: "#{angel.phone_number}",       # Replace with your phone number
           from: "+12053955462")     # Replace with your Twilio number
       puts message.sid
     end
