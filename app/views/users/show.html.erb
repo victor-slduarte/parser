@@ -122,9 +122,7 @@
                 <% Angel.all.each_with_index do |angel, i| %>
                   <% break if i > 2 %>
                    <h5> <strong> Angel: </strong>  <%= angel.first_name %> </h5>
-                   <h5> <strong> Telefone: </strong>  <%= angel.phone_number %> </h5>
-                   <div class="text-right">
-                   <%= link_to 'Editar', edit_user_angel_path(@user), class: 'btn btn-light text-center' %></div>
+                   <h5> <strong> Telefone: </strong>  <%= angel.phone_number %>  <%= link_to 'Editar', edit_user_angel_path(@user), class: 'btn btn-light text-left' %></h5>
 
                 <% end %>
               <div class="modal-footer-angel">
