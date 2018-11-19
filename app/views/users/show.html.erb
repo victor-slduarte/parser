@@ -2,8 +2,9 @@
   <div class="row">
 
 <!--------- Card1 telefone e email ---------------------------------------------------------------->
+    <% img_telefone_email = image_path('telefone_email.jpg')%>
     <div class="col-xs-12 col-sm-3">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/telefone_email.jpeg');">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= img_telefone_email %>);">
         <div class="card-description">
           <h2>Meu telefone e e-mail</h2>
         </div>
@@ -29,8 +30,9 @@
 <!--------- Card1 ------------------------------------------------------------------------->
 
 <!--------- Card2 Endereço-------------------------------------------------------------->
+    <% img_endereco1 = image_path('endereço1.jpg') %>
     <div class="col-xs-12 col-sm-3">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/endereço1.jpeg');">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= img_endereco1 %>');">
         <div class="card-description">
           <h2>Meu endereço</h2>
         </div>
@@ -56,8 +58,9 @@
 <!--------- Card2 ------------------------------------------------------------------------->
 
 <!--------- Card3  Placa e Modelos --------------------------------------------------------->
+    <% img_placa1 = image_path('placa1.jpg') %>
     <div class="col-xs-12 col-sm-3">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/placa1.jpeg');">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= img_placa1 %>');">
         <div class="card-description">
           <h2>Modelo e Placa</h2>
         </div>
@@ -83,8 +86,9 @@
     </div>
 
 <!--------- Card4 ANngels ----------------------------------------------------->
+    <% img_angels = image_path('angels.jpg') %>
     <div class="col-xs-12 col-sm-3">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('/assets/angels.jpeg');">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= img_angels %>');">
         <div class="card-description">
           <h2>Angels cadastrados</h2>
         </div>
