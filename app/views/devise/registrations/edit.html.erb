@@ -50,20 +50,20 @@
                         label: "Senha",
                         # hint: "deixe em branco caso não queira modificar",
                         required: false,
-                        as: (params[:address] == 'true' || params[:car_info] == 'true' || params[:angels] == 'true' ? :hidden : :string),
+                        as: (params[:address] == 'true' || params[:car_info] == 'true' || params[:angels] == 'true' ? :hidden : :password),
                         input_html: { autocomplete: "new-password" } %>
 
             <%= f.input :password_confirmation,
                         label: "Confirmação de Senha",
                         required: false,
-                        as: (params[:address] == 'true' || params[:car_info] == 'true' || params[:angels] == 'true' ? :hidden : :string),
+                        as: (params[:address] == 'true' || params[:car_info] == 'true' || params[:angels] == 'true' ? :hidden : :password),
                         input_html: { autocomplete: "new-password" } %>
 
             <%= f.input :current_password,
                         label: "Senha Atual",
                         hint: "Precisamos da senha atual para atualizar suas modificações",
                         required: true,
-                        as: (params[:address] == 'true' || params[:car_info] == 'true' || params[:angels] == 'true' ? :hidden : :string),
+                        as: (params[:address] == 'true' || params[:car_info] == 'true' || params[:angels] == 'true' ? :hidden : :password),
                         input_html: { autocomplete: "current-password" } %>
 
           </div>
