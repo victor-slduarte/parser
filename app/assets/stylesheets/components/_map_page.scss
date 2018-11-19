@@ -13,12 +13,21 @@
     flex-direction: column;
     margin-right: 15px;
     margin-left: 15px;
+
+}
+
+.bio-header h3 {
+  color: white;
+}
+
+.bio-header p {
+  color: white;
 }
 
 .carinfo {
-position: relative;
+    position: relative;
     text-align: center;
-    padding: 10px 0px;
+    padding: 2px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,10 +40,18 @@ position: relative;
 }
 
 .current-address {
-font-size: 35px;
+font-size: 20px;
 margin-left: 15px;
 text-align: center;
 }
+
+.current-address p{
+font-size: 20px;
+margin-left: 15px;
+text-align: center;
+color:red;
+}
+
 
 .mapview {
   margin-right: 15px;
