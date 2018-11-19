@@ -1,4 +1,13 @@
-<div class="navbar-wagon">
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<div class="navbar-wagon navbar-fixed-bottom footer">
+
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "logoT.png", height: 50 %>
@@ -7,16 +16,16 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right">
 
-      <!-- Links when logged in -->
-      <%= link_to "Log Out", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+    <!-- Links when logged in -->
+    <%= link_to "Log Out", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
-      <!-- Avatar with dropdown menu -->
-      <div class="navbar-wagon-item">
-        <div class="dropdown">
-          <%= image_tag "Diego.jpeg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-        </div>
-      </div>
-
+    <!-- Avatar with dropdown menu -->
+  <div class="navbar-wagon-item">
+    <div class="dropdown">
+      <%= image_tag "Diego.jpg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+    </div>
+  </div>
   </div>
 </div>
+
 

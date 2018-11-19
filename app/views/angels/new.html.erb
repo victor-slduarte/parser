@@ -1,0 +1,10 @@
+
+<h1> Create new Angel </h1>
+
+<%= simple_form_for @angel, url: user_angels_path do |f| %>
+  <%= f.input :first_name%>
+  <%= f.input :last_name%>
+  <%= f.input :phone_number%>
+
+  <%= f.submit "Create Angel", class: "btn btn-primary" %>
+<% end %>
