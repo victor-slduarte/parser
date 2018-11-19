@@ -9,13 +9,16 @@ class AngelsController < ApplicationController
   end
 
   def new
+    # @user = current_user
     @angel = Angel.new
+    # @angel.user_id = current_user.id
   end
 
   def create
-    angel = Angel.new(angel_params)
-    angel.save
-    # redirect_to ??
+    @angel = Angel.new(angel_params)
+    @angel.user_id = current_user.id
+    @angel.save!
+    redirect_to user_path(current_user)
   end
 
   def edit
