@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <div class="form-edit-box">
+        <h2>Editar Angel</h2>
+
+        <%= simple_form_for @angel, url: user_angel_path do |f| %>
+          <%= f.error_notification %>
+
+          <%= f.input :first_name,
+                        label: "Nome",
+                        required: false %>
+            <%= f.input :last_name,
+                        label: "Sobrenome",
+                        required: false %>
+            <%= f.input :phone_number,
+                        label: "Telefone",
+                        required: false %>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Atualizar", class: "btn btn-primary" %>
+      </div>
+        <% end %>
+        <%= link_to "Voltar", :back %>
+      </div>
+    </div>
+  </div>
+</div>

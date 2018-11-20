@@ -124,7 +124,7 @@
               <div class="modal-header">
                 <h3> Lista de Angels:  </h3>
               </div>
-                <% Angel.all.each_with_index do |angel, i| %>
+                <% current_user.angels.each_with_index do |angel, i| %>
                   <% break if i > 2 %>
                    <h5> <strong> Angel: </strong>  <%= angel.first_name %> </h5>
 

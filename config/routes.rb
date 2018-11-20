@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show] do
     get 'danger', on: :member
     get 'map', on: :member
-    resources :angels, only: [:new, :create, :edit]
+    resources :angels, only: [:new, :create, :update, :edit]
   end
 
 

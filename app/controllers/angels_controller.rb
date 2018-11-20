@@ -28,7 +28,7 @@ class AngelsController < ApplicationController
   def update
     @angel = Angel.find(params[:id])
     @angel.update(angel_params)
-    # redirect_to ??
+    redirect_to user_path(current_user)
   end
 
   def destroy
