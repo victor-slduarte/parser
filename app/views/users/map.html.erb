@@ -1,3 +1,4 @@
+<meta name="format-detection" content="telephone=no">
 <div class="bodymap">
 <div class="container">
   <div class="box">
@@ -32,8 +33,11 @@
       <div class="panel panel-default">
         <div class="panel-body">
           <div class="current-address">
-            <i class="fas fa-exclamation-triangle"></i>
-               <%= current_user.first_name %> pode estar em perigo!!!
+
+
+            <span class="blinking"> Atenção </span>
+            <h3> <%= current_user.first_name %> pode estar em perigo!</h3>
+
               <p id="location"></p>
           </div>
           NIST Telephone Time-of-Day Service
