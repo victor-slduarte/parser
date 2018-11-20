@@ -26,11 +26,10 @@ const setDangerMarker = () => {
     var latLgn = {
       lat: parseFloat(data.feeds[1].field1),
       lng: parseFloat(data.feeds[1].field2)
-    }ç.m,lçç
+    }
     addMarker(latLgn);
   });
 
 }
 
-setInterval(setDangerMarker, 10000);
-
+setInterval(setDangerMarker, 5000);
