@@ -1,0 +1,36 @@
+console.log('Hello from mapper')
+
+var markers = [];
+
+const initMap = () => {
+  var saoPaulo = {lat: -23.5, lng: -46.6}
+
+  map = new google.maps.Map(document.getElementById('map'), {
+        center: saoPaulo,
+        zoom: 11
+      });
+}
+
+initMap();
+
+const addMarker = (location) => {
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map
+  });
+  markers.push(marker)
+}
+
+const setDangerMarker = () => {
+  $.getJSON('https://api.thingspeak.com/channels/630025/feeds.json?api_key=O082B0T51Z0IM9UP&results=2', function(data) {
+    var latLgn = {
+      lat: parseFloat(data.feeds[1].field1),
+      lng: parseFloat(data.feeds[1].field2)
+    }ç.m,lçç
+    addMarker(latLgn);
+  });
+
+}
+
+setInterval(setDangerMarker, 10000);
+
