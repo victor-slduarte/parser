@@ -75,7 +75,7 @@ margin-right: 20px;
 
 .panel-body {
     padding: 15px;
-    background-color: none;
+    background-color: #f9f9f9;;
 }
 
 .fa-exclamation-triangle {
@@ -84,16 +84,24 @@ font-size: 30px
 
 }
 
-.blinking{
-    animation:blinkingText 1.3s infinite;
+
+
+
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
 }
-@keyframes blinkingText{
-    0%{     color: red;    }
-    49%{    color: transparent; }
-    50%{    color: transparent; }
-    99%{    color:transparent;  }
-    100%{   color: #000;    }
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
 
 
 /*
