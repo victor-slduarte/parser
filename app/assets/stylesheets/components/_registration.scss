@@ -35,6 +35,10 @@ body {
   }
 }
 
+#fb-logo {
+  line-height: 39px;
+}
+
 @media (min-width: 1000px) {
 
   .form-login {
@@ -48,5 +52,7 @@ body {
   margin-right: -60px;
   margin-bottom: 110px;
   }
-
+  #fb-logo {
+    line-height: 39px;
+  }
 }
