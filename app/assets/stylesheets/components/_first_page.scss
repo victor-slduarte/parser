@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: space-around;
   overflow: hidden;
-  background: asset-url('mobilevideo.mp4');
+  background: asset-url('teaser.mp4');
   width:100vw;
 }
 
@@ -47,7 +47,10 @@ video::-webkit-media-controls {
 /*
 regra do desktop */
 @media (min-width: 1000px) {
-.banner {background-attachment: fixed;}
+.banner {
+  background-attachment: fixed;
+  background: asset-url('teste_easer2.mp4');
+}
 
   .teaser-mobile {
     display:none;
