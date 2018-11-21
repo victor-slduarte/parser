@@ -28,9 +28,10 @@ const setDangerMarker = () => {
       lng: parseFloat(data.feeds[1].field2)
     }
     addMarker(latLgn);
+    map.setCenter(latLgn);
   });
 
 }
 
-setInterval(setDangerMarker, 10000);
+setInterval(setDangerMarker, 5000);
 
