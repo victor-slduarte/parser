@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[danger show]
+  skip_before_action :authenticate_user!, only: %i[danger show map]
   before_action :set_user, only: %i[show danger]
   require 'open-uri'
 
