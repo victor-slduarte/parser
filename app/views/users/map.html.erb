@@ -7,7 +7,7 @@
       <% img = image_path("direcao_diurna.jpg") %>
         <div class="bio-header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('<%= img %>');background-size: cover;background-position: center center;">
         <%= image_tag 'Diego.jpg', class: 'avatar-large' %>
-          <h3> <%= current_user.first_name %> <%= current_user.last_name %></h3>
+          <h3> <%= @user.first_name %> <%= @user.last_name %></h3>
           <p>Motorista</p>
         </div>
       </div>
@@ -17,14 +17,14 @@
       <div class="flex-item">
         <div class="carinfo">
           <p><strong>Placa</strong></p>
-          <p><%= current_user.car_plate %></p>
+          <p><%= @user.car_plate %></p>
         </div>
       </div>
 
       <div class="flex-item">
         <div class="carinfo">
           <p><strong>Modelo</strong></p>
-          <p><%= current_user.car_model %></p>
+          <p><%= @user.car_model %></p>
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@
           <div class="current-address">
 
 
-            <span class="blink"> <p><i class="fas fa-exclamation-triangle"></i></p> Atenção: <%= current_user.first_name %> pode estar em perigo!</span>
+            <span class="blink"> <p><i class="fas fa-exclamation-triangle"></i></p> Atenção: <%= @user.first_name %> pode estar em perigo!</span>
             <div class="lastadress">
 
            <i class="fas fa-map-marker-alt"> Localização </i>

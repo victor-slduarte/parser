@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   end
 
   def map
-    @user = current_user
+    @user = User.find(params[:id])
     url = "https://api.thingspeak.com/channels/630025/feeds.json?api_key=O082B0T51Z0IM9UP&results=2"
     serialized_location = open(url).read
     hash = JSON.parse(serialized_location)
