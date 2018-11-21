@@ -13,20 +13,20 @@
       </div>
     </div>
 
-    <div class="row">
-    <div class="col-xs-12 col-sm-6">
+    <div class="flexbox">
+      <div class="flex-item">
         <div class="carinfo">
           <p><strong>Placa</strong></p>
           <p><%= current_user.car_plate %></p>
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-6">
-       <div class="carinfo">
+      <div class="flex-item">
+        <div class="carinfo">
           <p><strong>Modelo</strong></p>
           <p><%= current_user.car_model %></p>
         </div>
-   </div>
+      </div>
     </div>
 
     <div class="row">
@@ -36,14 +36,21 @@
 
 
             <span class="blink"> <p><i class="fas fa-exclamation-triangle"></i></p> Atenção: <%= current_user.first_name %> pode estar em perigo!</span>
+            <div class="lastadress">
 
-            <p>Último endereço:</p>
-            <p id="location"></p>
+           <i class="fas fa-map-marker-alt"> Localização </i>
+
+            <p id="location">Mourato Coelho, 304 - Vila Madalena</p>
+            </div>
+
+            <a href="tel:+55-11-951701220">
+              <button type="button" class="btn btn-danger">
+                Ligar para Polícia
+            </button>
+            </a>
           </div>
-          <button type="button" class="btn btn-danger"> Ligar para Polícia:
-          <a href="tel:+55-11-951701220"></a></button>
 
-
+<a href="tel:"></a>
         </div>
       </div>
     </div>

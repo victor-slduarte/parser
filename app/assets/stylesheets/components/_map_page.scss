@@ -46,19 +46,22 @@
 }
 
 .current-address {
-font-size: 20px;
-margin-left: 15px;
+font-size: 18px;
+// margin-left: 15px;
 text-align: center;
 color: red
 }
 
 .current-address p{
-font-size: 20px;
-margin-left: 15px;
+font-size: 18px;
+/* margin-left: 15px; */
 text-align: center;
 color:black;
 }
 
+.lastadress {
+    padding: 20px;
+  }
 
 .mapview {
   margin-right: 15px;
@@ -86,7 +89,19 @@ font-size: 30px
 }
 
 
+.flexbox {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
 
+.flex-item {
+  flex: 0 0 50%;
+}
+
+.btn-danger {
+  background-color:red;
+}
 
 .blink {
   animation: blink-animation 1s steps(5, start) infinite;
