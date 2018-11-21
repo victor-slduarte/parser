@@ -3,7 +3,7 @@ console.log('Hello from mapper')
 var markers = [];
 
 const initMap = () => {
-  var saoPaulo = {lat: -23.5, lng: -46.6}
+  var saoPaulo = {lat: -23.550453, lng: -46.633911}
 
   map = new google.maps.Map(document.getElementById('map'), {
         center: saoPaulo,
@@ -22,16 +22,30 @@ const addMarker = (location) => {
 }
 
 const setDangerMarker = () => {
+
   $.getJSON('https://api.thingspeak.com/channels/630025/feeds.json?api_key=O082B0T51Z0IM9UP&results=2', function(data) {
-    var latLgn = {
+    var latlng = {
       lat: parseFloat(data.feeds[1].field1),
       lng: parseFloat(data.feeds[1].field2)
     }
-    addMarker(latLgn);
-    map.setCenter(latLgn);
+    for (var i = 0; i < markers.length; i++ ) {
+      markers[i].setMap(null);
+    }
+    markers.length = 0;
+    addMarker(latlng);
+    map.setCenter(latlng);
+    map.setZoom(15);
+    var geocoder = new google.maps.Geocoder;
+    geocoder.geocode({'location': latlng}, function(results, status) {
+      if (status === google.maps.GeocoderStatus.OK) {
+        if (results[1]) {
+          document.getElementById("location").innerHTML = results[1].formatted_address;
+        }
+      }
+    });
   });
-
 }
+
 
 setInterval(setDangerMarker, 5000);
 
