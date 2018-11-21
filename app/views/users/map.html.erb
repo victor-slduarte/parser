@@ -1,52 +1,59 @@
+<meta name="format-detection" content="telephone=no">
+<div class="bodymap">
 <div class="container">
   <div class="box">
     <div class="row">
-
-
-        <% img = image_path("direcao_diurna.jpg") %>
-
+      <div class="header">
+      <% img = image_path("direcao_diurna.jpg") %>
         <div class="bio-header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('<%= img %>');background-size: cover;background-position: center center;">
-            <%= image_tag 'Diego.jpg', class: 'avatar-large' %>
-             <h3> <%= current_user.first_name %> <%= current_user.last_name %></h3>
-             <p>Motorista</p>
+        <%= image_tag 'Diego.jpg', class: 'avatar-large' %>
+          <h3> <%= current_user.first_name %> <%= current_user.last_name %></h3>
+          <p>Motorista</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="col-xs-12 col-sm-6">
+        <div class="carinfo">
+          <p><strong>Placa</strong></p>
+          <p><%= current_user.car_plate %></p>
         </div>
       </div>
 
-      <div class="row">
-
-        <div class="col-xs-12 col-sm-6">
-          <div class="carinfo">
-            <p><strong>Placa</strong></p>
-            <p><%= current_user.car_plate %></p>
-          </div>
+      <div class="col-xs-12 col-sm-6">
+       <div class="carinfo">
+          <p><strong>Modelo</strong></p>
+          <p><%= current_user.car_model %></p>
         </div>
-
-        <div class="col-xs-12 col-sm-6">
-          <div class="carinfo">
-            <p><strong>Modelo</strong></p>
-            <p><%= current_user.car_model %></p>
-          </div>
-        </div>
-
+   </div>
     </div>
 
     <div class="row">
       <div class="panel panel-default">
         <div class="panel-body">
-      <div class="current-address">
-        <i class="fas fa-exclamation-triangle"></i>
-        <p><blink>carro em perigo</p></blink>
-        <p id="location"></p>
+          <div class="current-address">
 
+
+            <span class="blink"> <p><i class="fas fa-exclamation-triangle"></i></p> Atenção: <%= current_user.first_name %> pode estar em perigo!</span>
+
+            <p>Último endereço:</p>
+            <p id="location"></p>
+          </div>
+          <button type="button" class="btn btn-danger"> Ligar para Polícia:
+          <a href="tel:+55-11-951701220"></a></button>
+
+
+        </div>
       </div>
-    </div>
-    </div>
     </div>
 
     <div class="row">
       <div class="mapview">
-      <%= render 'shared/map' %>
+        <%= render 'shared/map' %>
       </div>
     </div>
+
   </div>
+</div>
 </div>

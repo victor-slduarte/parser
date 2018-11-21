@@ -1,3 +1,9 @@
+.bodymap {
+
+    background-image: linear-gradient(to top, #051337, #073b67, #006797, #0097c3, #12caeb);
+    height: 180vh;
+}
+
 .avatar-large {
   width: 100px;
   border-radius: 50%;
@@ -43,13 +49,14 @@
 font-size: 20px;
 margin-left: 15px;
 text-align: center;
+color: red
 }
 
 .current-address p{
 font-size: 20px;
 margin-left: 15px;
 text-align: center;
-color:red;
+color:black;
 }
 
 
@@ -65,6 +72,39 @@ margin-right: 20px;
 
 
 }
+
+.panel-body {
+    padding: 15px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.fa-exclamation-triangle {
+color:red;
+font-size: 30px
+
+}
+
+
+
+
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+
+
 /*
 codigo diego
 
