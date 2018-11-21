@@ -1,12 +1,19 @@
+#home {
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:100;
+}
+
+
  .banner {
   background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: space-around;
   overflow: hidden;
-  background: url('/assets/mobilevideo.mp4');
+  background: asset-url('mobilevideo.mp4');
   width:100vw;
-  height:100vh;
 }
 
 .banner-home {
