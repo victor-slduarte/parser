@@ -19,6 +19,9 @@ gem 'webpacker'
 gem 'twilio-ruby'
 gem 'geocoder'
 gem 'faker'
+gem 'omniauth-facebook'
+gem 'figaro'
+gem 'bootstrap-social-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
