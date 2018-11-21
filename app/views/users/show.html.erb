@@ -4,6 +4,7 @@
 <!--------- Card1 telefone e email -------------------------------------------------->
 
     <div class="col-xs-12 col-sm-3">
+
       <% img_telefone_email = image_path('telefone_email.jpg')%>
 
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url(<%= img_telefone_email %>);">
@@ -40,6 +41,7 @@
 <!--------- Card2 Endereço-------------------------------------------------------------->
 
     <div class="col-xs-12 col-sm-3">
+
       <% img_endereco1 = image_path('endereço1.jpg') %>
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('<%= img_endereco1 %>');">
 
@@ -72,8 +74,10 @@
 <!--------- Card3  Placa e Modelos --------------------------------------------------------->
 
     <div class="col-xs-12 col-sm-3">
+
       <% img_placa1 = image_path('placa1.jpg') %>
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('<%= img_placa1 %>');">
+
 
         <div class="card-description">
           <h2>Modelo e Placa</h2>
@@ -104,6 +108,7 @@
 <!--------- Card4 ANngels ----------------------------------------------------->
 
     <div class="col-xs-12 col-sm-3">
+
         <% img_angels = image_path('angels.jpg') %>
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('<%= img_angels %>');">
 
@@ -122,7 +127,9 @@
                 <% current_user.angels.each_with_index do |angel, i| %>
                   <% break if i > 2 %>
                    <h5> <strong> Angel: </strong>  <%= angel.first_name %> </h5>
-                   <h5> <strong> Telefone: </strong>  <%= angel.phone_number %>  <%= link_to 'Editar', edit_user_angel_path(@user), class: 'btn btn-light text-left' %></h5>
+
+                   <h5> <strong> Telefone: </strong>  <%= angel.phone_number %>  <%= link_to 'Editar', edit_user_angel_path(@user, angel), class: 'btn btn-light text-left' %></h5>
+
 
                 <% end %>
               <div class="modal-footer-angel">

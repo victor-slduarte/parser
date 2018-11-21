@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def danger
-    @user.send_wpp_messages
+    @user.send_sms
     head :ok
   end
 
