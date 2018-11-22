@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   def send_sms
  # Your Auth Token from www.twilio.com/console
-    @client = Twilio::REST::Client.new ACCOUNT_SID, AUTH_TOKEN
+    @client = Twilio::REST::Client.new ENV['ACCOUNT_SID'], ENV['AUTH_TOKEN']
     self.angels.each do |angel|
       message = @client.messages.create(
           body: "#{angel.first_name.capitalize} #{angel.last_name.capitalize},
