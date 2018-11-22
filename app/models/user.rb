@@ -13,7 +13,8 @@ class User < ApplicationRecord
     @client = Twilio::REST::Client.new account_sid, auth_token
     self.angels.each do |angel|
       message = @client.messages.create(
-          body: "#{angel.first_name.capitalize} #{angel.last_name.capitalize}, #{self.first_name.capitalize} pode estar com problemas! Acesse o link para ver sua localização ao vivo: www.parserapp.com/users/#{self.id}/map",
+          body: "#{angel.first_name.capitalize} #{angel.last_name.capitalize},
+          #{self.first_name.capitalize} pode estar com problemas! Acesse o link para ver sua localização ao vivo: www.parserapp.com/users/#{self.id}/map",
           to: "#{angel.phone_number}",       # Replace with your phone number
           from: "+12053955462")     # Replace with your Twilio number
       puts message.sid
