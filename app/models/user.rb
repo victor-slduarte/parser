@@ -8,9 +8,8 @@ class User < ApplicationRecord
   has_many :angels
 
   def send_sms
-    account_sid = "ACa3f89f1058ccd3e0239c909a0f41216c" # Your Account SID from www.twilio.com/console
-    auth_token = "c68f3877a9bba3bfba3073ae85d99d47"   # Your Auth Token from www.twilio.com/console
-    @client = Twilio::REST::Client.new account_sid, auth_token
+ # Your Auth Token from www.twilio.com/console
+    @client = Twilio::REST::Client.new ACCOUNT_SID, AUTH_TOKEN
     self.angels.each do |angel|
       message = @client.messages.create(
           body: "#{angel.first_name.capitalize} #{angel.last_name.capitalize},
