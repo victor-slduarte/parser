@@ -14,8 +14,9 @@ class User < ApplicationRecord
     self.angels.each do |angel|
       message = @client.messages.create(
           body: "#{angel.first_name.capitalize} #{angel.last_name.capitalize},
-          #{self.first_name.capitalize} pode estar com problemas! Acesse o link para ver sua localização ao vivo: www.parserapp.com/users/#{self.id}/map",
-          to: "#{angel.phone_number}",       # Replace with your phone number
+
+          #{self.first_name.capitalize} está em perigo! Acesse o link para ver sua localização ao vivo: www.parserapp.com/users/#{self.id}/map",
+          to: "#{angel.phone_number}", # Replace with your phone number
           from: "+12053955462")     # Replace with your Twilio number
       puts message.sid
     end
